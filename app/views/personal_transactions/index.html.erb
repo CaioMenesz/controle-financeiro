@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <header class="header">
+    <nav class="nav">
+    <h1>Financeiro</h1>
+      <ul class="menu">
+        <li>Home</li>
+        <li>Despesas</li>
+        <li>Transações</li>
+      </ul>
+    </nav>
+  </header>
+
+<main>
+  <section class="intro">
+    <h1>Minhas Transações</h1>
+    <img src="https://cdn-icons-png.flaticon.com/512/4342/4342781.png">
+  </section>
+  
+  <section class="transactions">
+
+    <% @personal_transactions.each do |personal_transaction| %>
+        <h2><%= personal_transaction.title %></h2>
+        <p><%= personal_transaction.amount %></p>
+    <% end %>
+
+    <p><%= @sum %></p>
+
+    
+  </section>
+  
+</main>
+
+</body>
+
+</html>

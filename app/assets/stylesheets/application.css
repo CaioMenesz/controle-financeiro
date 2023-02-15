@@ -1,0 +1,52 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500;600;700;800&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  background: rgb(32, 30, 46);
+  color: #fff;
+}
+
+.nav {
+  display: flex;
+  width: 80%;
+  margin: auto;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 35px;
+}
+
+.menu {
+  display: flex;
+  gap: 20px;
+}
+
+.menu li {
+  list-style: none;
+}
+
+.intro {
+  display: flex;
+  width: 90%;
+  margin: auto;
+  align-items: center;
+  border: 3px solid rgb(40, 39, 50);
+  background: rgb(44, 43, 52);
+  border-radius: 7px;
+}
+
+.intro h1 {
+  background: rgb(44, 43, 52);
+  margin-left: 5.5%;
+}
+
+img {
+  width: 200px;
+  background: rgb(44, 43, 52);
+}
+
+.transactions {
+  width: 80%;
+  margin: auto;
+} */

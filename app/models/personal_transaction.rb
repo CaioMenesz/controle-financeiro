@@ -1,0 +1,2 @@
+class PersonalTransaction < ApplicationRecord
+end
