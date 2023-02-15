@@ -1,46 +1,58 @@
-<!DOCTYPE html>
-<html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/app/views/personal_transactions/style.css">
 </head>
 
 <body>
+
   <header class="header">
+
+    <div class="identity">
+      <a href="/"><%= image_tag ('/imgs/liquid-cash.svg')%></a>
+      <h1>Finacial Control</h1>
+    </div>
+
     <nav class="nav">
-    <h1>Financeiro</h1>
-      <ul class="menu">
-        <li>Home</li>
-        <li>Despesas</li>
-        <li>Transações</li>
-      </ul>
+      <button class="new-trans">Nova Transação</button>
     </nav>
+
   </header>
 
-<main>
-  <section class="intro">
-    <h1>Minhas Transações</h1>
-    <img src="https://cdn-icons-png.flaticon.com/512/4342/4342781.png">
-  </section>
-  
-  <section class="transactions">
+  <main>
 
-    <% @personal_transactions.each do |personal_transaction| %>
-        <h2><%= personal_transaction.title %></h2>
-        <p><%= personal_transaction.amount %></p>
-        <p><%= personal_transaction.info_type %></p>
-    <% end %>
+    <section class="app">
+      <div class="col">
+        <div class="row">
+          <h3>Entradas</h3>
+          <%= image_tag "/imgs/liquid-cash.svg" %>
+          <!-- usar funçao do ruby aqui! -->
+          <h2><%= @sum %></h2>
+        </div>
+        <div class="row">
+          <h3>Saídas</h3>
+          <%= image_tag "/imgs/liquid-cash.svg" %>
+          <!-- usar funçao do ruby aqui! -->
+          <h2><%= @sumDif %></h2>
+        </div>
+        <div class="row">
+          <h3>Lucro</h3>
+          <%= image_tag "/imgs/liquid-cash.svg" %>
+          <!-- usar funçao do ruby aqui! -->
+          <h2><%= @liquid %></h2>
+        </div>
+      </div>
+      <div class="col-2">
+        <div class="sub-col">
+          <% @personal_transactions.each do |personal_transaction| %>
+            <h2><%= personal_transaction.title %></h2>
+          <% end %>
+        </div>
+      </div>
+    </section>
 
-    <p><%= @sum %></p>
-    <p><%= @sumDif %></p>
-
-    
-  </section>
-  
-</main>
+  </main>
 
 </body>
-
-</html>
