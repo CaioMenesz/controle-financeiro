@@ -30,6 +30,7 @@
     <% @personal_transactions.each do |personal_transaction| %>
         <h2><%= personal_transaction.title %></h2>
         <p><%= personal_transaction.amount %></p>
+        <p><%= personal_transaction.info_type %></p>
     <% end %>
 
     <p><%= @sum %></p>
