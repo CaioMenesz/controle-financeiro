@@ -7,4 +7,12 @@ class PersonalTransactionsController < ApplicationController
     @liquid = @sum - @sumDif
   end
 
+  def new 
+    @personal_transaction = PersonalTransaction.new
+  end
+
+  def create 
+    
+  end
+
 end

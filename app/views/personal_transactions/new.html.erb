@@ -1,0 +1,8 @@
+<%= simple_form_for(:personal_transaction) do |f| %>
+  <%= f.input :title, label: "Título da transação: "%>
+  <%= f.input :description, label: "Descrição: "%>
+  <%= f.input :amount, label: "Valor" %>
+  <%= f.input :transaction_type, collection: ["Entrada", "Saída"], label: "Tipo da transação: " %>
+  <%= f.input :transaction_date, as: :date, label: "Data da transação: "%>
+  <%= f.submit "Cadastrar nova transação" %>
+<% end %>

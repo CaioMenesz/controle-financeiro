@@ -16,7 +16,7 @@
     </div>
 
     <nav class="nav">
-      <button class="new-trans">Nova Transação</button>
+      <%= link_to "Nova Transação", "/personal_transactions/new", class: "btn-add" %> 
     </nav>
 
   </header>
@@ -25,39 +25,53 @@
 
     <section class="app">
       <div class="col">
-        <div class="row">
+        <div class="row entry">
           <h3>Entradas</h3>
           <img src="https://cdn.discordapp.com/attachments/382526426047315968/1075553069988851722/entry.png">
           <!-- usar funçao do ruby aqui! -->
-          <h2>R$<%= @sum %></h2>
+          <h2>R$ <%= @sum %></h2>
         </div>
-        <div class="row">
+        <div class="row out">
           <h3>Saídas</h3>
           <img src="https://cdn.discordapp.com/attachments/382526426047315968/1075553070223736882/out.png">
           <!-- usar funçao do ruby aqui! -->
-          <h2>R$<%= @sumDif %></h2>
+          <h2>R$ <%= @sumDif %></h2>
         </div>
-        <div class="row">
+        <div class="row liquid">
           <h3>Lucro</h3>
           <img src="https://cdn.discordapp.com/attachments/382526426047315968/1075553069779128350/liquid-cash.png">
           <!-- usar funçao do ruby aqui! -->
-          <h2>R$<%= @liquid %></h2>
+          <h2>R$ <%= @liquid %></h2>
         </div>
       </div>
+
+      
+
       <div class="col-2">
-        <div class="sub-col description">
-        
+
         <div class="row-info">
+
           <% @personal_transactions.each do |personal_transaction| %>
-          <ul class="transactions">
-            <img src="https://cdn.discordapp.com/attachments/382526426047315968/1075553070223736882/out.png">
-              <li><p><%= personal_transaction.description %></p></li>
-              <li><p><%= personal_transaction.amount %></p></li>
-              <li><p><%= personal_transaction.title %></p></li>
-              <li><p><%= personal_transaction.transaction_date %></p></li>
+            <ul class="transactions">
+            <% if personal_transaction.title != "Salário" %>
+
+                <img src="https://cdn.discordapp.com/attachments/382526426047315968/1075553070223736882/out.png">
+                <li class="desc"><p><%= personal_transaction.description %></p></li>
+                <li class="amount"><p>R$ <%= personal_transaction.amount %></p></li>
+                <li class="title"><p><%= personal_transaction.title %></p></li>
+                <li class="date"><p><%= personal_transaction.transaction_date %></p></li>
+
+              <% else %>
+
+                <img src="https://cdn.discordapp.com/attachments/382526426047315968/1075553069988851722/entry.png">
+                <li><p><%= personal_transaction.description %></p></li>
+                <li><p>R$ <%= personal_transaction.amount %></p></li>
+                <li><p><%= personal_transaction.title %></p></li>
+                <li><p><%= personal_transaction.transaction_date %></p></li>
+
+            <% end %>
             </ul>
           <% end %>
-        </div>
 
         </div>
       </div>
