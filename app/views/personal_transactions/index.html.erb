@@ -30,19 +30,19 @@
           <h3>Entradas</h3>
           <img src="https://cdn.discordapp.com/attachments/382526426047315968/1075553069988851722/entry.png">
           <!-- usar funçao do ruby aqui! -->
-          <h2>R$ <%= @sum %></h2>
+          <h2><%= number_to_currency(@sum, unit: "R$ ", separator: ",", delimiter: ".") %></h2>
         </div>
         <div class="row out">
           <h3>Saídas</h3>
           <img src="https://cdn.discordapp.com/attachments/382526426047315968/1075553070223736882/out.png">
           <!-- usar funçao do ruby aqui! -->
-          <h2>R$ <%= @sumDif %></h2>
+          <h2><%= number_to_currency(@sumDif, unit: "R$ -", separator: ",", delimiter: ".") %></h2>
         </div>
         <div class="row liquid">
           <h3>Lucro</h3>
           <img src="https://cdn.discordapp.com/attachments/382526426047315968/1075553069779128350/liquid-cash.png">
           <!-- usar funçao do ruby aqui! -->
-          <h2>R$ <%= @liquid %></h2>
+          <h2><%= number_to_currency(@liquid, unit: "R$ ", separator: ",", delimiter: ".") %></h2>
         </div>
       </div>
 
@@ -65,10 +65,10 @@
               <% else %>
 
                 <img src="https://cdn.discordapp.com/attachments/382526426047315968/1075553069988851722/entry.png">
-                <li><p><%= personal_transaction.description %></p></li>
-                <li><p>R$ <%= personal_transaction.amount %></p></li>
-                <li><p><%= personal_transaction.title %></p></li>
-                <li><p><%= personal_transaction.transaction_date %></p></li>
+                <li class="desc"><p><%= personal_transaction.description %></p></li>
+                <li class="amount"><p>R$ <%= personal_transaction.amount %></p></li>
+                <li class="title"><p><%= personal_transaction.title %></p></li>
+                <li class="date"><p><%= personal_transaction.transaction_date %></p></li>
 
             <% end %>
             </ul>

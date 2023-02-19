@@ -1,8 +1,31 @@
-<%= simple_form_for(:personal_transaction) do |f| %>
-  <%= f.input :title, label: "Título da transação: "%>
-  <%= f.input :description, label: "Descrição: "%>
-  <%= f.input :amount, label: "Valor" %>
-  <%= f.input :transaction_type, collection: ["Entrada", "Saída"], label: "Tipo da transação: " %>
-  <%= f.input :transaction_date, as: :date, label: "Data da transação: "%>
-  <%= f.submit "Cadastrar nova transação" %>
-<% end %>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="app/assets/stylesheets/application.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+</head>
+
+<header class="header">
+
+    <nav class="nav">
+    <div class="identity">
+      <a href="/"><img src="https://cdn.discordapp.com/attachments/382526426047315968/1075552121920966786/Vector.png"></a>
+      <h1>Finacial Control</h1>
+    </div>
+      <%= link_to "Voltar", "/personal_transactions/#", class: "btn-add" %> 
+    </nav>
+      <a href="/personal_transactions/#"><i class="fa-solid fa-plus"></i></a>
+
+</header>
+
+<section class="form-section">
+  <%= simple_form_for(:personal_transaction) do |f| %>
+    <p><%= f.input :title, label: "Título da transação: "%></p>
+    <p><%= f.input :description, label: "Descrição: "%></p>
+    <p><%= f.input :amount, label: "Valor" %></p>
+    <p><%= f.input :transaction_type, collection: ["Entrada", "Saída"], label: "Tipo da transação: " %></p>
+    <p><%= f.input :transaction_date, as: :date, label: "Data da transação: "%></p>
+    <p><%= f.submit "Cadastrar nova transação" %></p>
+  <% end %>
+</section>
