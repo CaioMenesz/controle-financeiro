@@ -147,6 +147,9 @@ h3 {
   .col {
     font-size: .875rem;
   }
+  .col img {
+    width: 24px;
+  }
   .row-info ul {
     font-size: .875rem;
   }
