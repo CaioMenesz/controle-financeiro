@@ -313,7 +313,7 @@ body {
 }
 
 .form-section input[type="text"] {
-  width: 98.5% !important;
+  width: 99% !important;
   color: #000;
 }
 
@@ -345,4 +345,35 @@ body {
 .form-section input[type="submit"]:hover {
   width: 100%;
   background-color: #f97300;
+}
+
+@media (max-width: 1000px) {
+  .form-section input[type="text"] {
+    width: 96% !important;
+  }
+.form-section input[type="date"],
+.form-section select {
+  color: #000;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  background-color: #e6e6e6;
+  width: 99%;
+  margin-bottom: 20px;
+}
+.form-section input[type="submit"] {
+  background-color: #f97300;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 100%;
+  transition: 0.8s;
+}
+.form-section input[type="submit"]:hover {
+  transform: translateY(10px);
+}
 }
