@@ -7,7 +7,7 @@
     title: "Café", 
     description: "Café forte da marca XYZ", 
     amount: 14.99, 
-    transaction_type: "debit", 
+    transaction_type: "Saída", 
     transaction_date: "2023-02-01"
   )
 
@@ -15,7 +15,7 @@
     title: "Leite", 
     description: "Da marca YZO", 
     amount: 8.99, 
-    transaction_type: "debit", 
+    transaction_type: "Saída", 
     transaction_date: "2023-02-02"
   )
 
@@ -23,7 +23,7 @@
      title: "Salário",
      description: "Salário do mês de fevereiro", 
      amount: 2000.00,
-     transaction_type: "credit", 
+     transaction_type: "Entrada", 
      transaction_date: "2023-02-10"
     )
 

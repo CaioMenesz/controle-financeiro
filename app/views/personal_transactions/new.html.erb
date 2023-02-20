@@ -25,7 +25,7 @@
     <p><%= f.input :description, label: "Descrição: "%></p>
     <p><%= f.input :amount, label: "Valor" %></p>
     <p><%= f.input :transaction_type, collection: ["Entrada", "Saída"], label: "Tipo da transação: " %></p>
-    <p><%= f.input :transaction_date, as: :date, label: "Data da transação: "%></p>
-    <p><%= f.submit "Cadastrar nova transação" %></p>
+    <p><%= f.input :transaction_date, as: :date, label: "Data da transação: ", :order => [:day, :month, :year]%></p>
+    <p><%= f.submit "Cadastrar nova transação"%></p>
   <% end %>
 </section>
