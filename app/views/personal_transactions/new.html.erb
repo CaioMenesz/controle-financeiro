@@ -20,10 +20,10 @@
 </header>
 
 <section class="form-section">
-  <%= simple_form_for(:personal_transaction) do |f| %>
+  <%= simple_form_for @personal_transaction, method: :post, url: personal_transactions_path do |f| %>
     <p><%= f.input :title, label: "Título da transação: "%></p>
     <p><%= f.input :description, label: "Descrição: "%></p>
-    <p><%= f.input :amount, label: "Valor" %></p>
+    <p><%= f.input :amount, label: "Valor:" %></p>
     <p><%= f.input :transaction_type, collection: ["Entrada", "Saída"], label: "Tipo da transação: " %></p>
     <p><%= f.input :transaction_date, as: :date, label: "Data da transação: ", :order => [:day, :month, :year]%></p>
     <p><%= f.submit "Cadastrar nova transação"%></p>
