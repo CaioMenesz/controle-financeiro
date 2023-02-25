@@ -32,4 +32,9 @@ class PersonalTransactionsController < ApplicationController
     )
   end
 
+  def show
+    @personal_transactions = PersonalTransaction.all
+    @personal_transaction = PersonalTransaction.find(params[:id])
+  end
+
 end

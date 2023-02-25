@@ -54,7 +54,7 @@
 
           <% @personal_transactions.each do |personal_transaction| %>
             <ul class="transactions">
-            <% if personal_transaction.title != "Salário" %>
+            <% if personal_transaction.transaction_type != "Entrada" %>
 
                 <img src="https://cdn.discordapp.com/attachments/382526426047315968/1075553070223736882/out.png">
                 <li class="desc"><p><%= personal_transaction.description %></p></li>
@@ -76,6 +76,12 @@
 
         </div>
       </div>
+    </section>
+
+    <section class="transacoes">
+      <% @personal_transactions.each do |personal_transaction| %>
+        <p><%= link_to "Transações", personal_transaction_path(personal_transaction.id) %></p>
+      <% end %>
     </section>
 
   </main>

@@ -378,3 +378,25 @@ body {
   transform: translateY(10px);
 }
 }
+
+.transacoes {
+  display: flex;
+  margin: 20px;
+  padding: 20px;
+  justify-content: space-between;
+  background: #f8f5e4;
+  border-radius: 5px;
+}
+
+.transacoes a {
+  text-decoration: none;
+  font-weight: 600;
+  background: #0e3047;
+  border-radius: 5px;
+  padding: 10px 20px;
+  transition: 1s;
+}
+
+.transacoes a:hover {
+  background: #10828C;
+}
